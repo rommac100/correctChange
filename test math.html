@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+
+    <script type="text/javascript">
+
+        function makeChange(){
+
+            var tendered = document.getElementById("tendered").value;
+            var due = document.getElementById("due").value;
+            var x = tendered - due;
+
+            console.log(due);
+
+
+            //Calculate the numbers of each denomination such the distribution is correct.
+            var twenties = 0;
+            var ten = 0;
+            var five = 0;
+            var one = 0;
+            var quarters = 0;
+            var dimes = 0;
+            var nickles = 0;
+            var pennies = 0;
+
+            while (x >= 20)
+            {
+                x -= 20;
+                twenties += 1;
+                document.getElementById("Twenties").innerHTML = String(quarters);
+
+            }
+
+            while (x >= 10)
+            {
+                x -= 10;
+                ten += 1;
+                document.getElementById("Tens").innerHTML = String(ten);
+
+            }
+
+            while (x >= 5)
+            {
+                x -= 5;
+                five += 1;
+                document.getElementById("Fives").innerHTML = String(five);
+
+            }
+
+            while (x >= 1)
+            {
+                x -= 1;
+                one += 1;
+                document.getElementById("Ones").innerHTML = String(one);
+
+            }
+
+            while (x >= .25)
+            {
+                x -= .25;
+                quarters += 1;
+                document.getElementById("Quarters").innerHTML = String(quarters);
+
+            }
+
+            while (x >= .10)
+            {
+                x -=.10;
+                dimes += 1;
+                document.getElementById("Dimes").innerHTML = String(dimes);
+
+            }
+            while (x >= .05)
+            {
+                x -=.05;
+                nickles += 1;
+                document.getElementById("Nickles").innerHTML = String(nickles);
+            }
+            while (x >= .01)
+            {
+                x -=.01;
+                pennies += 1;
+                document.getElementById("Pennies").innerHTML = String(pennies);
+
+            }
+
+
+
+
+
+
+
+
+
+
+
+
+            //This code below changes the html to reflect the proper change.
+            document.getElementById("twenties").innerHTML = String(twenties);
+
+
+
+
+        }
+
+    </script>
+
+    /head>
+
+
+<body>
+<table><tr><td>
+    <tr><td>Enter the amount due:</td><td><input id ="due" length 30> </td></tr>
+    <tr><td>Enter the amount tendered:</td><td><input id ="tendered" length 30> <br></td></tr>
+    <tr><td><button id="changer" onclick="makeChange()">Calculate Change</button></td></tr>
+</table>
+<p>
+<p>
+<table id = "changeTable">
+    <tr><td> $20 Bill: </td><td id ="Twenties">0</td></tr>
+    <tr><td> $10 Bill: </td><td id = "Tens">0</td></tr>
+    <tr><td> $5 Bill: </td><td id = "Fives">0</td></tr>
+    <tr><td> $1 Bill: </td><td id="Ones">0</td></tr>
+    <tr><td> Quarters: </td><td id="Quarters">0</td></tr>
+    <tr><td> Dimes: </td><td id ="Dimes">0</td></tr>
+    <tr><td> Nickels: </td><td id ="Nickels">0</td></tr>
+    <tr><td> Pennies: </td><td id="Pennies">0</td></tr>
+</table>
+
+</html>
