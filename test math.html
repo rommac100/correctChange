@@ -9,7 +9,7 @@
 
             var tendered = document.getElementById("tendered").value;
             var due = document.getElementById("due").value;
-            var x = tendered - due;
+            var x = tendered - due+.005;
 
             console.log(due);
 
@@ -28,7 +28,7 @@
             {
                 x -= 20;
                 twenties += 1;
-                document.getElementById("Twenties").innerHTML = String(quarters);
+                document.getElementById("Twenties").innerHTML = String(twenties);
 
             }
 
@@ -75,7 +75,7 @@
             {
                 x -=.05;
                 nickles += 1;
-                document.getElementById("Nickles").innerHTML = String(nickles);
+                document.getElementById("Nickels").innerHTML = String(nickles);
             }
             while (x >= .01)
             {
